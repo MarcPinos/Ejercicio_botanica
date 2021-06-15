@@ -1,0 +1,6 @@
+df <- read.csv("Datos_botanica.csv",stringsAsFactors = TRUE)
+nesp <- table(df$EspÃ.cie)
+esp <- c(names(table(df$EspÃ.cie)))
+par(mar=c(7, 4.1, 4.1, 2.1))
+plot(df$EspÃ.cie, df$DistÃ.ncia.al.camÃ...m.,xaxt = "n", main="Especies en función de la distancia",ylab= 'Distancia (metros)',xlab= NULL, cex.lab=1.2)
+text(x = 1:17, y = par("usr")[3] - 0.45,labels = esp,xpd = NA,srt = 50,adj = 0.965,cex = 0.8)
